@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Babylon.js Scene with Corina</title>
+    <script src="/Libs/babylon.js"></script>
+    <script src="/Libs/babylon.glTF2FileLoader.min.js"></script>
+    <style>
+        #renderCanvas {
+            width: 100%;
+            height: 100vh;
+            display: block;
+            position: absolute;
+            z-index: 1; /* Ensure canvas is above the video element */
+            background-color: transparent; /* Ensure canvas background is transparent */
+        }
+        #videoElement {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 0;
+        }
+        #toggleModelButton, #toggleCameraButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            margin-right: 10px;
+            z-index: 2; /* Ensure buttons are above all other elements */
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleModelButton">Toggle Model</button>
+    <button id="toggleCameraButton" style="left: 140px;">Toggle Camera Feed</button>
+    <video id="videoElement" autoplay></video>
+    <canvas id="renderCanvas"></canvas>
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
